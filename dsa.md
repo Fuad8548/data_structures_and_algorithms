@@ -1,5 +1,21 @@
 <div align="center">Data Structures and Algorithms in Python</div>
 
+## Table of Contents
+* [1. Introduction](#1-introduction)
+* [2. Getting Started](#2-getting-started)
+    * [2.1 Installation](#21-installation)
+* [3. Frequently Asked Questions](#3-frequently-asked-questions)
+
+
+- [Table of Contents](#table-of-contents)
+- [Binary Search](#binary-search)
+- [Stacks](#stacks)
+- [Queues](#queues)
+
+
+
+
+
 ## Binary Search
   ```python
   import timeit
@@ -67,35 +83,34 @@ So,
 - Slice-based:  sort O(n log n)  +  search O(n) = O(n log n)
 
 **Best Case vs worst case:**
-# Best Case:
-
-# Find largest prime factor of a given number: time - O(√n); space - O(1)
-def largestPrimeFactor(n):
-    largestPrime = None
-    
-    # Strips all factors of two - O(log n)
-    while (n % 2 == 0):
-        largestPrime = 2
-        n //= 2   
-        
-    # check for odd factors from 3 - O(√n)
-    i = 3
-    while (i * i <= n):
-        while (n % i == 0):
-            largestPrime = i
-            n //= i
-        i += 2
-            
-    # if n is still greater than 1, it is itself a prime
-    if n > 1:
-        largestPrime = n 
-    return largestPrime
-    
-print(largestPrimeFactor(13195))
-
-
-# Worst Case:
   ```python
+  # Best Case:
+  # Find largest prime factor of a given number: time - O(√n); space - O(1)
+  def largestPrimeFactor(n):
+      largestPrime = None
+      
+      # Strips all factors of two - O(log n)
+      while (n % 2 == 0):
+          largestPrime = 2
+          n //= 2   
+          
+      # check for odd factors from 3 - O(√n)
+      i = 3
+      while (i * i <= n):
+          while (n % i == 0):
+              largestPrime = i
+              n //= i
+          i += 2
+              
+      # if n is still greater than 1, it is itself a prime
+      if n > 1:
+          largestPrime = n 
+      return largestPrime
+      
+  print(largestPrimeFactor(13195))
+
+
+  # Worst Case:
   def largestPrimeFactor(n):
       largestPrime = None
       
